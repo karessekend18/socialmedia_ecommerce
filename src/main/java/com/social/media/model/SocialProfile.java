@@ -1,5 +1,6 @@
 package com.social.media.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,5 +13,6 @@ public class SocialProfile {
 
     @OneToOne
     @JoinColumn(name = "social_user")
+    @JsonIgnore
     private SocialUser user;
 }
